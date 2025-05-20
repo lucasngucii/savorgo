@@ -39,6 +39,9 @@ export class Option {
 
 
 export class OrderItem {
+  @Prop({ required: true })
+  item_id: string;
+
   @Prop({ type: Size, required: true })
   size: Size;
 

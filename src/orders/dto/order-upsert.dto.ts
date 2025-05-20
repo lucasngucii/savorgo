@@ -25,6 +25,10 @@ export class OptionDto {
 }
 
 export class OrderItemDto {
+  @ApiProperty({description: 'Item ID', example: 'item_123456'})
+  @IsString()
+  item_id: string;
+
   @ApiProperty({ description: 'Size information' })
   @ValidateNested()
   @Type(() => SizeDto)
